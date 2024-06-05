@@ -1,0 +1,11 @@
+<div class="stepper" fxLayout="row" fxLayoutAlign="center stretch">
+  <div class="item" [@fadeInOut]="currentStep === i ? 'active' : 'void'" (click)="changeStep(i)" *ngFor="let item of steps; let i = index"  fxLayout="column" fxLayoutAlign="space-between stretch">
+    <p class="headerStep" [ngClass]="{'active': i === currentStep}">{{item.label}}</p>
+    <div class="stepIndex"
+         [ngClass]="{'active': i === currentStep}"
+         fxLayout="column" fxLayoutAlign="center center">
+      <span class="main"></span>
+      <p class="text">{{i+1}}</p>
+    </div>
+  </div>
+</div>

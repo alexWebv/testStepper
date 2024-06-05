@@ -1,0 +1,73 @@
+.stepper {
+  background: black;
+  padding: 30px;
+
+  .item {
+    width: 280px;
+    height: 55px;
+    cursor: pointer;
+    text-align: center;
+
+    .headerStep {
+      color: #8D8D8D;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .headerStep.active {
+      color: white;
+    }
+
+    div.stepIndex {
+      position: relative;
+      text-align: center;
+    }
+
+    div.stepIndex.active::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      z-index: -1;
+    }
+
+    div.stepIndex span.main {
+      padding: 0 140px;
+      position: relative;
+      height: 1px;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 10px;
+      border-radius: 10px;
+      z-index: 1;
+      width: 20px
+    }
+
+    div.stepIndex.active span.main {
+      background-color: #22ECE9;
+
+    }
+
+    p.text {
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: -10px;
+      background-color: #202020;
+      border: 1px solid #383838;
+      color: #A5A5A5;
+      z-index: 999;
+    }
+
+
+    .active p.text {
+      color: black;
+      background-color: #22ECE9;
+    }
+
+  }
+}
